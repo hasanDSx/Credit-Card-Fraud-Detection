@@ -348,7 +348,6 @@ credit-card-fraud-detection/
 ├── ml_analysis_report.ipynb        # Original Jupyter notebook
 ├── creditcard.csv                  # Dataset (download from Kaggle — not tracked in git)
 ├── best_rfc_fraud_detector.joblib  # Saved final model (generated after training)
-├── Documentation Report.pdf
 └── README.md
 ```
 
