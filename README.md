@@ -27,7 +27,7 @@ optimised for Precision-Recall AUC on a severely imbalanced dataset.**
 
 ---
 
-## 🔍 The Problem
+## 🔍 The Problem <a id="the-problem"></a>
 
 Credit card fraud detection is a classic **imbalanced binary classification** problem.
 With roughly **1 fraud per 577 normal transactions (0.17%)**, accuracy is a deceptive
