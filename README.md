@@ -267,7 +267,7 @@ python -m venv venv
 source venv/bin/activate        # Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install scikit-learn pandas numpy matplotlib seaborn joblib
 ```
 
 **requirements.txt:**
@@ -345,10 +345,13 @@ pred  = model.predict(X_new)               # 0 or 1
 ```
 credit-card-fraud-detection/
 │
+├── images/                         # All visualizations from the ML pipeline
+│   ├── img_00_cell20.png
+│   ├── img_01_cell22.png
+│   └── ...
 ├── ml_analysis_report.ipynb        # Original Jupyter notebook
 ├── creditcard.csv                  # Dataset (download from Kaggle — not tracked in git)
 ├── best_rfc_fraud_detector.joblib  # Saved final model (generated after training)
-├── Images
 └── README.md
 ```
 
