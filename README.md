@@ -43,7 +43,7 @@ This pipeline addresses that by:
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset <a id="dataset"></a>
 
 | Property | Value |
 |---|---|
@@ -59,7 +59,7 @@ This pipeline addresses that by:
 
 ---
 
-## 🔬 Exploratory Data Analysis
+## 🔬 Exploratory Data Analysis <a id="exploratory-data-analysis"></a>
 
 ### The Imbalance Problem — Visualised
 
@@ -110,7 +110,7 @@ Two key insights emerge:
 
 ---
 
-## ⚙️ Feature Engineering
+## ⚙️ Feature Engineering <a id="feature-engineering"></a>
 
 ### Unlocking Time-of-Day Signals
 
@@ -138,7 +138,7 @@ Original `Time` and `Amount` columns are dropped post-engineering.
 
 ---
 
-## 🤖 Modelling Journey
+## 🤖 Modelling Journey <a id="modelling-journey"></a>
 
 ### Step 1 — The Baseline Trap
 
@@ -198,7 +198,7 @@ param_grid = {
 
 ---
 
-## 📈 Final Results
+## 📈 Final Results <a id="final-results"></a>
 
 ### Confusion Matrices — Before vs After
 
@@ -255,7 +255,7 @@ confirms that the log-transform was a worthwhile engineering decision.
 
 ---
 
-## ⚙️ Installation & Usage
+## ⚙️ Installation & Usage <a id="installation-usage"></a>
 
 ```bash
 # Clone the repo
@@ -303,7 +303,7 @@ pred  = model.predict(X_new)               # 0 or 1
 
 ---
 
-## 🧠 Key Design Decisions
+## 🧠 Key Design Decisions <a id="key-design-decisions"></a>
 
 | Decision | Rationale |
 |---|---|
@@ -316,7 +316,7 @@ pred  = model.predict(X_new)               # 0 or 1
 
 ---
 
-## 🔮 Next Steps
+## 🔮 Next Steps <a id="next-steps"></a>
 
 | Priority | Action | Expected Benefit |
 |---|---|---|
@@ -330,7 +330,7 @@ pred  = model.predict(X_new)               # 0 or 1
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure <a id="project-structure"></a>
 
 ```
 credit-card-fraud-detection/
@@ -348,5 +348,5 @@ credit-card-fraud-detection/
 ---
 
 <div align="center">
-Made by Hasan
+Made by Hasan Muhammad
 </div>
