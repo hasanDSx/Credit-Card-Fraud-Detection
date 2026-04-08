@@ -15,15 +15,15 @@ optimised for Precision-Recall AUC on a severely imbalanced dataset.**
 
 ## 📋 Table of Contents
 
-- [The Problem](#-the-problem)
-- [Dataset](#-dataset)
-- [Exploratory Data Analysis](#-exploratory-data-analysis)
-- [Feature Engineering](#-feature-engineering)
-- [Modelling Journey](#-modelling-journey)
-- [Final Results](#-final-results)
-- [Installation & Usage](#-installation--usage)
-- [Key Design Decisions](#-key-design-decisions)
-- [Next Steps](#-next-steps)
+- [The Problem](#the-problem)
+- [Dataset](#dataset)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Feature Engineering](#feature-engineering)
+- [Modelling Journey](#modelling-journey)
+- [Final Results](#final-results)
+- [Installation & Usage](#installation--usage)
+- [Key Design Decisions](#key-design-decisions)
+- [Next Steps](#next-steps)
 
 ---
 
@@ -268,16 +268,6 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install scikit-learn pandas numpy matplotlib seaborn joblib
-```
-
-**requirements.txt:**
-```
-scikit-learn>=1.3
-pandas>=2.0
-numpy>=1.24
-matplotlib>=3.7
-seaborn>=0.12
-joblib>=1.3
 ```
 
 > Download `creditcard.csv` from [Kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
