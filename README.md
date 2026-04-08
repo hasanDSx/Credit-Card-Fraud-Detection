@@ -21,7 +21,7 @@ optimised for Precision-Recall AUC on a severely imbalanced dataset.**
 - [Feature Engineering](#feature-engineering)
 - [Modelling Journey](#modelling-journey)
 - [Final Results](#final-results)
-- [Installation & Usage](#installation--usage)
+- [Installation & Usage](#installation-usage)
 - [Key Design Decisions](#key-design-decisions)
 - [Next Steps](#next-steps)
 
@@ -66,7 +66,7 @@ This pipeline addresses that by:
 The first thing to confront is how extreme the class imbalance really is. This is not a
 minor skew — fraud is a needle in a haystack:
 
-![Class Distribution](img_01_cell22.png)
+![Class Distribution](images/img_01_cell22.png)
 
 > 492 fraudulent transactions against 284,315 normal ones. Any model that ignores this will
 > simply predict "Normal" for everything and look great on paper.
@@ -78,7 +78,7 @@ minor skew — fraud is a needle in a haystack:
 With PCA-transformed features, understanding *which* components carry the fraud signal is
 critical. A full correlation heatmap reveals the hidden structure of the data:
 
-![Correlation Heatmap](img_00_cell20.png)
+![Correlation Heatmap](images/img_00_cell20.png)
 
 The standout finding: **V17 and V14 are strongly negatively correlated with fraud** — meaning
 fraudulent transactions tend to push these components sharply downward. This becomes a key
@@ -90,7 +90,7 @@ signal for the final model.
 
 Fraud doesn't happen uniformly across time. Examining the distribution of all transactions:
 
-![Transaction Time Distribution](img_02_cell23.png)
+![Transaction Time Distribution](images/img_02_cell23.png)
 
 The two-peaked distribution reflects the **48-hour capture window** — daytime activity on two
 separate days. This motivates the `Hour` feature created in the next step.
@@ -101,7 +101,7 @@ separate days. This motivates the `Hour` feature created in the next step.
 
 The amount distribution tells a revealing story about fraud behaviour:
 
-![Fraud Amount Distribution](img_03_cell24.png)
+![Fraud Amount Distribution](images/img_03_cell24.png)
 
 Two key insights emerge:
 - **Most fraud involves small amounts** (≤ $500) — fraudsters stay under radar thresholds
@@ -121,7 +121,7 @@ Raw `Time` (seconds since first transaction) is hard to interpret. Converting it
 df_credits['Hour'] = (df_credits['Time'] // 3600) % 24
 ```
 
-![Fraud by Hour of Day](img_04_cell29.png)
+![Fraud by Hour of Day](images/img_04_cell29.png)
 
 The results are striking: **fraud rate spikes dramatically in the early morning hours
 (1–4 AM)** — when transaction monitoring is at its lowest and cardholders are asleep.
@@ -154,11 +154,11 @@ The confusion matrices make this concrete:
 
 **Training set** — the model has memorised everything:
 
-![Baseline Train Confusion Matrix](img_05_cell36.png)
+![Baseline Train Confusion Matrix](images/img_05_cell36.png)
 
 **Test set** — the cracks appear:
 
-![Baseline Test Confusion Matrix](img_06_cell37.png)
+![Baseline Test Confusion Matrix](images/img_06_cell37.png)
 
 > ⚠️ A model that misses 31% of fraud while looking impressive on accuracy is not a
 > fraud detector — it's a liability. This baseline exists to prove that point.
@@ -206,11 +206,11 @@ The improvement over baseline is most visible in the confusion matrices.
 
 **Final model — Training set:**
 
-![Best RFC Train Confusion Matrix](img_07_cell51.png)
+![Best RFC Train Confusion Matrix](images/img_07_cell51.png)
 
 **Final model — Test set:**
 
-![Best RFC Test Confusion Matrix](img_08_cell52.png)
+![Best RFC Test Confusion Matrix](images/img_08_cell52.png)
 
 The model now catches the vast majority of fraud with far fewer misses — a fundamental
 improvement over the baseline that looked good but failed where it mattered.
@@ -221,7 +221,7 @@ improvement over the baseline that looked good but failed where it mattered.
 
 The two curves together tell the full story of model quality:
 
-![PR and ROC Curves](img_09_cell55.png)
+![PR and ROC Curves](images/img_09_cell55.png)
 
 | Metric | Train | Test |
 |---|---|---|
@@ -239,7 +239,7 @@ measures minority-class performance.
 
 Feature importance reveals *why* the model works:
 
-![Feature Importances](img_10_cell57.png)
+![Feature Importances](images/img_10_cell57.png)
 
 | Rank | Feature | Notes |
 |---|---|---|
