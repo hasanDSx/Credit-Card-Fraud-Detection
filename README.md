@@ -339,12 +339,12 @@ credit-card-fraud-detection/
 │   ├── img_00_cell20.png
 │   ├── img_01_cell22.png
 │   └── ...
-├── ml_analysis_report.ipynb        # Original Jupyter notebook
-├── creditcard.csv                  # Dataset (download from Kaggle — not tracked in git)
+├── .env.example                    # Template for environment variables (Data Path)
+├── .gitignore                      # Files to ignore (Sensitive data & Large CSVs)
+├── README.md                       # Project documentation and insights
 ├── best_rfc_fraud_detector.joblib  # Saved final model (generated after training)
-├── .env.example                    # Template for environment variables
-├── .gitignore                      # Files to ignore (including your local .env)
-└── README.md
+├── ml_analysis_report.ipynb        # Original Jupyter notebook
+└── *creditcard.csv                  # Dataset (download from Kaggle — not tracked in git)
 ```
 
 ---
